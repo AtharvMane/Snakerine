@@ -76,7 +76,8 @@ public class GamePanel extends JPanel implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         this.move();
-        snakes[0].checkCollision();
+        snakes[0].checkSelfEat();
+
         if(snakes[0].checkFood(fruitPosX,fruitPosY)){
             this.spawnFruit();
         };        
