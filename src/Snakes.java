@@ -3,8 +3,8 @@ import java.util.Random;
 import java.awt.*;
 public class Snakes {
     private int length=1;
-    public int[] xPos=new int[30];
-    public int[] yPos=new int[30];
+    public int[] xPos=new int[40];
+    public int[] yPos=new int[40];
     Random random=new Random();
     private Character direction='R';
     Snakes(){
@@ -48,12 +48,16 @@ public class Snakes {
                 break;
         }
     }
-    public void checkCollision() {
+    public void checkSelfEat() {
         for(int i=1;i<this.length;i++){
             if(xPos[0]==xPos[i] && yPos[0]==yPos[i]){
                 System.out.println("collided self");
+                this.reduceLength(i);
             }
         }
+    }
+    private void reduceLength(int i) {
+        this.length=i;
     }
     
     public boolean checkFood(int a, int b){
