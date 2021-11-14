@@ -16,7 +16,7 @@ next:- a rough suggestion (if any) as to how to solve the issue.
 ## While making a pull request:-
 Before making a pull request always open an issue before making the pull request.
 in the PR,
-1st line:- resolves #<issue number> (note:- no spaces)
+1st line:- resolves #issue number (note:- no spaces)
 describe how the PR solves the issue.
   
 ## Thank You
